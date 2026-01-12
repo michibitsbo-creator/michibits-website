@@ -1,35 +1,105 @@
-/* Michi Bits Styles */
-:root{--brand-pink:#feceda;--black:#000;--white:#fff;--muted:#666;}
-*{box-sizing:border-box}
-body{font-family:Inter,system-ui,Arial;margin:0;color:var(--black);background:var(--white);line-height:1.5}
-.container{max-width:1100px;margin:0 auto;padding:20px}
-.site-header{background:var(--white);border-bottom:1px solid #eee;position:sticky;top:0;z-index:20}
-.header-inner{display:flex;align-items:center;justify-content:space-between}
-.logo{height:56px}
-.nav{display:flex;gap:14px;align-items:center}
-.nav a{text-decoration:none;color:var(--black);padding:10px;font-weight:600}
-.btn-contact{background:var(--brand-pink);padding:8px 12px;border-radius:6px}
-.menu-toggle{display:none;background:none;border:none;font-size:22px}
+:root{
+  --pink:#feceda;
+  --earth:#e8dccf;
+  --dark:#1c1c1c;
+}
 
-.hero{padding:40px 0;background:linear-gradient(90deg,rgba(254,206,218,0.15),#fff)}
-.hero-inner{display:flex;gap:30px;align-items:center}
-.hero img{max-width:380px;width:100%;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.08)}
+body{
+  margin:0;
+  font-family:'Inter',sans-serif;
+  color:var(--dark);
+  background:#fff;
+  line-height:1.7;
+}
 
-.section{padding:48px 0}
-.section.alt{background:#fafafa}
-h2{margin:0 0 12px}
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:60px 20px;
+}
 
-.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:18px}
-.card{border:1px solid #eee;padding:12px;border-radius:10px;background:#fff}
-.card img{width:100%;height:160px;object-fit:cover;border-radius:8px}
-.card h4{margin:10px 0 6px}
-.card p{margin:0 0 10px;color:var(--muted);font-size:.95rem}
-.actions{display:flex;gap:8px}
-.price{font-weight:800}
+.site-header{
+  position:sticky;
+  top:0;
+  background:#fff;
+  border-bottom:1px solid #eee;
+  z-index:10;
+}
 
-@media(max-width:900px){
-  .hero-inner{flex-direction:column-reverse}
-  .nav{display:none}
-  .menu-toggle{display:block}
-  .nav.open{display:flex;flex-direction:column;position:absolute;right:20px;top:70px;background:#fff;padding:10px;box-shadow:0 10px 30px rgba(0,0,0,0.1)}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:20px;
+}
+
+.logo{
+  height:160px; /* 3x */
+}
+
+.nav a{
+  margin-left:20px;
+  text-decoration:none;
+  color:var(--dark);
+  font-weight:500;
+}
+
+.hero{
+  background:radial-gradient(circle at top, var(--pink), #fff);
+}
+
+h1,h2,h3{
+  font-family:'Playfair Display',serif;
+}
+
+h1{
+  font-size:3rem;
+}
+
+.subtitle{
+  font-size:1.2rem;
+  margin-bottom:40px;
+}
+
+.section{
+  background:#fff;
+}
+
+.section.soft{
+  background:#faf7f4;
+}
+
+.section.textured{
+  background:
+    linear-gradient(180deg,#fff, #faf7f4),
+    repeating-radial-gradient(circle at center, rgba(0,0,0,0.02) 0 1px, transparent 1px 12px);
+}
+
+blockquote{
+  margin:40px 0;
+  font-size:1.2rem;
+  font-style:italic;
+  border-left:4px solid var(--pink);
+  padding-left:20px;
+}
+
+ul{
+  padding-left:20px;
+}
+
+.benefits{
+  columns:2;
+}
+
+details{
+  background:#fff;
+  border:1px solid #eee;
+  padding:15px;
+  margin-bottom:15px;
+}
+
+.site-footer{
+  text-align:center;
+  padding:40px;
+  background:#f3f3f3;
 }
